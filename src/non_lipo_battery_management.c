@@ -22,6 +22,9 @@
 
 #ifdef CONFIG_ADC_NRFX_SAADC
 #include <zephyr/dt-bindings/adc/nrf-adc.h>
+#ifndef NRF_SAADC_AIN0
+#define NRF_SAADC_AIN0 NRF_ADC_AIN0
+#endif
 #else
 #error "This driver requires the nRF SAADC ADC driver to be enabled."
 #endif
